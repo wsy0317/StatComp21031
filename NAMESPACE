@@ -3,4 +3,6 @@
 export(DFM)
 export(FM)
 export(gibbs_cpp)
+importFrom(Rcpp,sourceCpp)
 importFrom(stats,sd)
+useDynLib(StatComp21031)

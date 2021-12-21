@@ -1,3 +1,8 @@
+#' @useDynLib StatComp21031
+#' @importFrom Rcpp sourceCpp
+NULL
+#> NULL
+
 #' @title Determing the number of factors in approximate factor models.
 #' @description The function is adapted by Bai & Ng method to minimize information criterion with two penalties in static factor models.
 #' @param Y p by n matrix of raw data, where p is the dimensionality, n is the sample size.
