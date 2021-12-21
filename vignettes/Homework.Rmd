@@ -45,7 +45,7 @@ Example 2. Insert a picture
 The following figure shows a picture inserted from a local file.
 
 ```{r ,out.width="50%"}
-knitr::include_graphics("D:/R homework/1.jpg")
+#knitr::include_graphics("D:/R homework/1.jpg")
 ```
 
 \
@@ -54,14 +54,14 @@ Example 3. Make a pie chart
 The figure shows a pie chart drawn according to the data read into the file. The figure clearly shows its proportion according to the values of A, B, C, D and E.
 
 ```{r }
-data <- read.table("D:/R homework/1.txt",header = T)
-head(data)
-per.labs <- paste0(data$ID,": ",round(100 * data$value / sum(data$value),2),"%")
-pie(data$value,
-    labels = per.labs, # add tags
-    col = c("cyan", "cornsilk", "green3",
-           "purple", "violetred1")
-)
+# data <- read.table("D:/R homework/1.txt",header = T)
+# head(data)
+# per.labs <- paste0(data$ID,": ",round(100 * data$value / sum(data$value),2),"%")
+# pie(data$value,
+#    labels = per.labs, # add tags
+#    col = c("cyan", "cornsilk", "green3",
+#           "purple", "violetred1")
+#)
 ```
 
 Example 4. Cluster
@@ -118,19 +118,19 @@ kableExtra::kable_styling(coe,bootstrap_options = "striped",
 **Exercise 3.4**
 
 ```{r ,out.width="70%",echo=FALSE}
-knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.4.png")
+# knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.4.png")
 ```
 
 **Exercise 3.11**
 
 ```{r ,out.width="70%",echo=FALSE}
-knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.11.png")
+# knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.11.png")
 ```
 
 **Exercise 3.20**
 
 ```{r ,out.width="70%",echo=FALSE}
-knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.20.png")
+# knitr::include_graphics("D:/R homework/A-21031-2021-9-23/exercise 3.20.png")
 ```
 
 ## Answer
