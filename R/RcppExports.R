@@ -7,10 +7,8 @@
 #' @return a random sample of size \code{n}
 #' @examples
 #' \dontrun{
-#' rnC <- gibbsC(100,10)
-#' par(mfrow=c(2,1));
-#' plot(rnC[,1],type='l')
-#' plot(rnC[,2],type='l')
+#' rnC <- gibbsC(100)
+#' rnC
 #' }
 #' @export
 gibbs_cpp <- function(N) {

@@ -17,6 +17,25 @@ The R package 'microbenchmark' can be used to benchmark the above _FM_ and _DFM_
 
 ## Benchmarking _FM_ and _DFM_
 
+The \code{FM} function is adapted by Bai & Ng method to minimize information criterion with two penalties in static factor models.
+
+$$
+\widehat{K}=\arg \min _{0 \leq K_{1} \leq M} \log \left\{\frac{1}{p n}\left\|\mathbf{Y}-n^{-1} \mathbf{Y} \widehat{\mathbf{F}}_{K_{1}} \widehat{\mathbf{F}}_{K_{1}}^{\prime}\right\|_{F}^{2}\right\}+K_{1} g(n, p)
+$$
+where $M$ is a prescribed upper bound, $\widehat{\mathbf{F}}_{K_{1}}$ is a $n \times K_{1}$ matrix whose columns are $\sqrt{n}$ times the eigenvectors corresponding to the $K_{1}$ largest eigenvalues of the $n \times n$ matrix $\mathbf{Y}^{\prime} \mathbf{Y}$;
+
+Here we choose two penalties below.
+
+$$
+\mathrm{IC} 1: g(n, p)=\frac{p+n}{p n} \log \left(\frac{p n}{p+n}\right)
+$$
+
+$$
+\text { IC2 }: g(n, p)=\frac{p+n}{p n} \log \min \{p, n\}
+$$
+
+The \code{DFM} function is used to minimize information criterion with two penalties in the general dynamic factor model. Comparing to the static factor model, parameters of information criterion in this model is not fixed, changing the fixed p,n and c to vectors.
+
 The source R code for _FM_ is as follows:
 ```{r,eval=FALSE}
 FM<-function (Y) 
@@ -47,7 +66,6 @@ FM<-function (Y)
   K2 = which.min(IC[2, ])
   result <- list(K1 = K1, K2 = K2, IC = IC)
   return(result)
-}
 }
 ```
 

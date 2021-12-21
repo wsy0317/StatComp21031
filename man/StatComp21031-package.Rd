@@ -1,6 +1,5 @@
 \name{StatComp21031-package}
 \alias{StatComp21031-package}
-\alias{StatComp21031}
 \docType{package}
 \title{
   This package provides several functions using R and gives the functions to determine the number of factors in factor models.
