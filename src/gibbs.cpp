@@ -7,7 +7,7 @@ using namespace Rcpp;
 //' @return a random sample of size \code{n}
 //' @examples
 //' \dontrun{
-//' rnC <- gibbsC(100)
+//' rnC <- gibbs_cpp(100)
 //' rnC
 //' }
 //' @export
