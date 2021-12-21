@@ -17,7 +17,7 @@ A Gibbs sampler using Rcpp
 }
 \examples{
 \dontrun{
-rnC <- gibbsC(100)
+rnC <- gibbs_cpp(100)
 rnC
 }
 }
